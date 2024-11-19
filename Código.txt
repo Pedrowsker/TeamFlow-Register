@@ -1,0 +1,23 @@
+CREATE TABLE faltas (
+  nome VARCHAR(200),
+  motivo VARCHAR(255) NOT NULL,
+  data_falta DATE,
+  codigo_funcionario VARCHAR(8)
+);
+
+CREATE TABLE funcionarios (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    codigo VARCHAR(50) NOT NULL UNIQUE, 
+    nome VARCHAR(100) NOT NULL, 
+    unidade VARCHAR(100), 
+    cpf CHAR(16), 
+    numero_celular CHAR(14), 
+    numero_reserva CHAR(14), 
+    salario DECIMAL(10,2), 
+    salario_total DECIMAL(10,2), 
+    beneficios TEXT, 
+    valor_vr DECIMAL(10,2) DEFAULT 0, 
+    valor_va DECIMAL(10,2) DEFAULT 0, 
+    valor_vt DECIMAL(10,2) DEFAULT 0, 
+    valor_mob DECIMAL(10,2) DEFAULT 0 
+);
